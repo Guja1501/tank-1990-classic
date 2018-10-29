@@ -12,4 +12,4 @@ function require(src) {
     document.body.appendChild(s);
 }
 
-libs.forEach(lib => require(`/src/js/${lib}`));
+libs.forEach(lib => require(`src/js/${lib}`));
