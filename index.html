@@ -8,13 +8,13 @@
 	<meta charset="utf-8"/>
 	<script>
 		// 'development', 'production'
-		const mode = 'development';
+		window.mode = 'production';
 	</script>
 </head>
 <body>
 <script>
-	const version = path => {
-		if (mode === 'development') {
+	window.version = path => {
+		if (window.mode === 'development') {
 			return `${path}?v${Date.now()}`;
 		}
 
