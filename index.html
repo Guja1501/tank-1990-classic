@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="src/css/app.css">
-    <meta charset="utf-8" />
-  </head>
-  <body>
-    <script>
-      +function(s){
-        s.src = 'src/js/app.js?v' + Date.now();
-        document.body.appendChild(s);
-      }(document.createElement('script'));
-    </script>
-  </body>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="src/css/app.css">
+	<meta charset="utf-8"/>
+	<script>
+		// 'development', 'production'
+		const mode = 'development';
+	</script>
+</head>
+<body>
+<script>
+	const version = path => {
+		if (mode === 'development') {
+			return `${path}?v${Date.now()}`;
+		}
+
+		return path;
+	};
+
+	+function (s) {
+		s.src = version('src/js/app.js');
+		document.body.appendChild(s);
+	}(document.createElement('script'));
+</script>
+</body>
 </html>

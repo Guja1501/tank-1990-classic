@@ -8,7 +8,7 @@ let libs = [
 
 function require(src) {
     let s = document.createElement('script');
-    s.src = src + '?v' + Date.now();
+    s.src = version(src);
     document.body.appendChild(s);
 }
 
