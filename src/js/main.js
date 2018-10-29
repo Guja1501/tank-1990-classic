@@ -4,9 +4,9 @@ bullets = [];
 soundEffects = {};
 
 function preload(){
-    soundEffects.exp = loadSound('/src/sounds/explosion.mp3');
-    soundEffects.moving = loadSound('/src/sounds/moving.mp3');
-    soundEffects.shoot = loadSound('/src/sounds/shoot.mp3');
+    soundEffects.exp = loadSound('src/sounds/explosion.mp3');
+    soundEffects.moving = loadSound('src/sounds/moving.mp3');
+    soundEffects.shoot = loadSound('src/sounds/shoot.mp3');
 }
 
 function setup() {
